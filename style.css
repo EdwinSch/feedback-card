@@ -16,8 +16,10 @@ body {
     font-family: 'Overpass', sans-serif;
 }
 
-.feedbackCard {
-    /* border: solid red 1px; */
+/* ---- FEEDBACK CARD ---- */
+
+.feedbackCard,
+.returnCard {
     width: 415px;
     height: 415px;
     padding: 35px;
@@ -28,21 +30,16 @@ body {
     justify-content: space-between;
 }
 
-.returnCard {
-    width: 415px;
-    height: 415px;
-    padding: 35px;
-    border-radius: 40px;
-    background-color: #222933;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    gap: 30px;
+.align-center {
     align-items: center;
-
 }
 
-figure {
+.hide {
+    display: none;
+}
+
+
+#star-icon {
     width: 50px;
     height: 50px;
     display: flex;
@@ -61,6 +58,10 @@ p {
     font-size: 15px;
     font-weight: 400;
     line-height: 23px;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .ratingContainer {
@@ -108,6 +109,8 @@ button {
     font-size: 15px;
     cursor: pointer;
     transition: 0.2s ease;
+    outline: none;
+    border: none;
 }
 
 button:hover {
@@ -115,22 +118,73 @@ button:hover {
     color: #fc7613;
 }
 
+/* ---- RETURN CARD ---- */
+
 .returnValue {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 50px;
+    margin-bottom: 30px;
+    width: auto;
+    padding: 10px 15px;
     border-radius: 50px;
     color: #fc7613;
     background-color: #2f3a44;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 h2 {
     color: white;
 }
 
-.align-center {
+.return-text {
     text-align: center;
+}
+
+@media screen and (max-width: 450px) {
+
+    .feedbackCard,
+    .returnCard {
+        margin: 0px 10px;
+        width: 330px;
+        height: 360px;
+    }
+
+    #star-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .rating {
+        width: 40px;
+        height: 40px;
+    }
+
+    button {
+        height: 40px;
+        font-size: 13px;
+    }
+
+    #return-illustration {
+        text-align: center;
+
+    }
+
+    #return-illustration>img {
+        width: 70%;
+    }
+
+    .returnValue {
+        margin-bottom: 20px;
+    }
+
 }

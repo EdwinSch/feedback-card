@@ -3,6 +3,7 @@ const ratings = document.querySelectorAll(".rating")
 const submitBtn = document.getElementById("submit")
 const feedbackCard = document.querySelector(".feedbackCard");
 const returnCard = document.querySelector(".returnCard");
+const returnValue = document.querySelector(".returnValue");
 let score = null;
 
 // FUNCTIONS
@@ -24,14 +25,9 @@ submitBtn.addEventListener("click", function () {
         }, 500);
 
     } else {
-        feedbackCard.style.display = "none";
-        returnCard.style.display = "flex";
-        returnCard.innerHTML = `
-             <div class="returnValue">You have selected ${score} out of 5</div>
-                <h2>Thank You!</h2>
-                <p class="align-center">We appriciate you taking the time to give a rating. If you ever need more support, don't hasitate to get in
-            touch!</p>
-            `
+        feedbackCard.classList.add("hide");
+        returnCard.classList.remove("hide");
+        returnValue.innerHTML = `You have selected ${score} out of 5`
     }
 
 });

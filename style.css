@@ -1,0 +1,136 @@
+/* RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* MAIN CSS */
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #141519;
+    font-family: 'Overpass', sans-serif;
+}
+
+.feedbackCard {
+    /* border: solid red 1px; */
+    width: 415px;
+    height: 415px;
+    padding: 35px;
+    border-radius: 40px;
+    background-color: #222933;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.returnCard {
+    width: 415px;
+    height: 415px;
+    padding: 35px;
+    border-radius: 40px;
+    background-color: #222933;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+
+}
+
+figure {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2f3a44;
+    border-radius: 50%;
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: #9ea5af;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 23px;
+}
+
+.ratingContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2f3a44;
+    border-radius: 50%;
+    color: #9ea5af;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.rating:hover {
+    background-color: #fc7613;
+    color: white;
+}
+
+.selectedRating {
+    background-color: #9ea5af;
+    color: white;
+}
+
+.errorRating {
+    background-color: red;
+    color: white;
+    transition: 0.3s ease;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+    font-family: 'Overpass', sans-serif;
+    letter-spacing: 2px;
+    background-color: #fc7613;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background-color: white;
+    color: #fc7613;
+}
+
+.returnValue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+    color: #fc7613;
+    background-color: #2f3a44;
+    font-size: 15px;
+}
+
+h2 {
+    color: white;
+}
+
+.align-center {
+    text-align: center;
+}
